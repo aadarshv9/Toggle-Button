@@ -1,0 +1,35 @@
+.toggle{
+	display: block;
+	width: 100px;
+	height: 52px;
+	margin: 100px auto;
+	border: 5px solid black;
+	border-radius: 30px;
+	position: relative;
+	background-color: green;
+	transition: 1s ease-in-out;
+}
+
+.toggle:after{
+	content: '';
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	left: 1px;
+	transition: all 0.7s ease-in-out; 
+
+}
+
+#toggle-button:checked + .toggle:after{
+	left: 48px;
+}
+
+#toggle-button:checked + .toggle{
+	background-color: red;
+}
+
+#toggle-button{
+	display: none;
+}
